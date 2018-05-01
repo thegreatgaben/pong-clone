@@ -3,9 +3,9 @@
 #include <iostream>
 #include <stdio.h>
 #include <string>
-#include <SDL.h>
-#include <SDL_ttf.h>
-#include <SDL_mixer.h>
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_ttf.h>
+#include <SDL2/SDL_mixer.h>
 #include <math.h>
 
 const int SCREEN_WIDTH = 1024;
