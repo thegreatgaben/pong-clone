@@ -8,6 +8,10 @@ FILES = main.cpp \
 		paddle.cpp \
 		texture.cpp
 
+SRCPATH = src
+
+SRCFILES = $(addprefix $(SRCPATH)/, $(FILES))
+
 LDFLAGS = -lSDL2 \
 		  -lSDL2_ttf \
 		  -lSDL2_mixer
@@ -16,5 +20,5 @@ APPNAME = pong.sdl
 
 all: $(APPNAME)
 
-$(APPNAME): $(FILES)
-	$(CXX) $(CXXFLAGS) -o $(APPNAME) $(FILES) $(LDFLAGS)
+$(APPNAME): $(SRCFILES)
+	$(CXX) $(CXXFLAGS) -o $(APPNAME) $(SRCFILES) $(LDFLAGS)
